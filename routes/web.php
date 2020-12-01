@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products/{product}', [App\Http\Controllers\ProductsController::class, 'show'])->name('show');
+Route::resource('products', 'ProductsController');
+
